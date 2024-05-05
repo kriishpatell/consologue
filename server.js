@@ -5,11 +5,11 @@ const app = express();
 app.use(express.json());
 
 // Import route modules
-const accountsRouter = require('./routes/account');
-const gamesRouter = require('./routes/game');
-const manageGamesRouter = require('./routes/manage-game'); 
-const profileRouter = require('./routes/profile');
-const reviewsRouter = require('./routes/review');
+const accountsRouter = require('./endpoints/account');
+const gamesRouter = require('./endpoints/game');
+const manageGamesRouter = require('./endpoints/manage-game'); 
+const profileRouter = require('./endpoints/profile');
+const reviewsRouter = require('./endpoints/review');
 
 // Use route modules with specific prefixes
 app.use('/api/account', accountsRouter);
